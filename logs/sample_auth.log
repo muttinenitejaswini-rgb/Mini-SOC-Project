@@ -1,0 +1,11 @@
+
+2026-10-24 09:10:12 INFO Login successful for user admin from 192.168.1.10
+2026-10-24 09:11:05 WARNING Failed login for user admin from 192.168.1.25
+2026-10-24 09:11:18 WARNING Failed login for user admin from 192.168.1.25
+2026-10-24 09:11:31 WARNING Failed login for user admin from 192.168.1.25
+2026-10-24 09:12:02 INFO Login successful for user student from 192.168.1.15
+2026-10-24 10:15:10 WARNING Failed login for user student from 192.168.1.30
+2026-10-24 10:15:20 WARNING Failed login for user student from 192.168.1.31
+2026-10-24 10:15:30 WARNING Failed login for user student from 192.168.1.32
+2026-10-24 11:20:10 WARNING Failed login for user admin from 192.168.1.25
+2026-10-24 11:20:20 WARNING Failed login for user admin from 192.168.1.25
