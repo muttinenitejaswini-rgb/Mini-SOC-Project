@@ -20,29 +20,30 @@ This project is a beginner-friendly Security Operations Center (SOC) prototype b
 - Windows
 - Git and GitHub
 
-## Detection Logic
+## Detection Rules
 
-- Group failed login attempts by username and source IP address.
-- Generate an alert when the count reaches 3 or more.
-- Assign MEDIUM severity for 3–4 failed attempts.
-- Assign HIGH severity for 5 or more failed attempts.
-- Save the results to `reports/alerts.txt`.
+### Rule 1: Repeated Failed Login Detection
+- Groups failed login attempts by username and source IP address.
+- Generates an alert after 3 or more failed attempts.
+- Assigns MEDIUM severity for 3–4 attempts.
+- Assigns HIGH severity for 5 or more attempts.
 
-## Project Structure
-
-- `analyze_logs.py` - Python log analysis and alert generation.
-- `logs/sample_auth.log` - Fictional authentication log entries.
-- `detection-rules/brute_force_rule.md` - Detection rule documentation.
-- `reports/alerts.txt` - Generated security alert report.
-- `screenshots/` - Project output screenshots.
+### Rule 2: Multiple Source IP Login Detection
+- Groups failed login events by username.
+- Identifies usernames associated with 3 or more distinct source IP addresses.
+- Generates a MEDIUM severity alert when the threshold is reached.
 
 ## Test Results
 
-The project was tested with fictional authentication logs containing repeated failed login attempts.
+The analyzer was tested using fictional authentication logs.
 
-- Three failed attempts from the same username and IP generated a MEDIUM alert.
-- Five failed attempts from the same username and IP generated a HIGH alert.
-- The generated report includes a timestamp, alert severity, username, source IP, and failed-attempt count.
+- Five failed login attempts for `admin` from `192.168.1.25` generated a HIGH brute-force alert.
+- Failed login attempts for `student` from 3 distinct source IP addresses generated a MEDIUM multi-IP alert.
+- Both alerts were written to `reports/alerts.txt`.
+
+## Limitations
+
+This is a local Python-based prototype that analyzes sample logs. It does not currently monitor live systems or deploy detection rules inside Wazuh.
 
 ## Screenshots
 
