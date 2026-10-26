@@ -48,11 +48,11 @@ The project was tested with fictional authentication logs containing repeated fa
 
 ### Terminal Output
 
-![Mini SOC Terminal Output](screenshots/mini-soc-terminal-output.png)
+![Mini SOC Terminal Output](https://raw.githubusercontent.com/muttinenitejaswini-rgb/Mini-SOC-Project/main/screenshots/mini-soc-terminal-output.png)
 
 ### Security Alert Report
 
-![Mini SOC Security Alert Report](screenshots/mini-soc-alert-report.png)
+![Mini SOC Security Alert Report](https://raw.githubusercontent.com/muttinenitejaswini-rgb/Mini-SOC-Project/main/screenshots/mini-soc-alert-report.png)
 
 ## Limitations
 
