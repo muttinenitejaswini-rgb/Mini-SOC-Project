@@ -1,6 +1,7 @@
 MINI SOC - SECURITY ALERT REPORT
 ========================================
-Report generated: 2026-10-26 09:39:27
-Total alerts: 1
+Report generated: 2026-10-26 11:38:28
+Total alerts: 2
 
-2026-10-26 09:39:27 | Severity: HIGH | Possible brute-force activity | User: admin | IP: 192.168.1.25 | Failed attempts: 5
+2026-10-26 11:38:28 | Severity: HIGH | Possible brute-force activity | User: admin | IP: 192.168.1.25 | Failed attempts: 5
+2026-10-26 11:38:28 | Severity: MEDIUM | Failed logins from multiple source IPs | User: student | Distinct source IPs: 3
