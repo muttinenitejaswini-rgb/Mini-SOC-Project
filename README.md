@@ -41,6 +41,26 @@ The analyzer was tested using fictional authentication logs.
 - Failed login attempts for `student` from 3 distinct source IP addresses generated a MEDIUM multi-IP alert.
 - Both alerts were written to `reports/alerts.txt`.
 
+## Automated Testing
+
+The project uses Python's built-in `unittest` framework to test the log analysis function.
+
+Five test cases cover:
+
+1. Three failed login attempts trigger a MEDIUM severity alert.
+2. Five failed login attempts trigger a HIGH severity alert.
+3. Two failed login attempts do not trigger a brute-force alert.
+4. Failed logins from three distinct source IP addresses trigger a MEDIUM severity alert.
+5. Malformed authentication log entries are ignored.
+
+Run the automated tests with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+All five tests passed during testing.
+
 ## Limitations
 
 This is a local Python-based prototype that analyzes sample logs. It does not currently monitor live systems or deploy detection rules inside Wazuh.
