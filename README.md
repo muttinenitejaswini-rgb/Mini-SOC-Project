@@ -23,12 +23,14 @@ This project is a beginner-friendly Security Operations Center (SOC) prototype b
 ## Detection Rules
 
 ### Rule 1: Repeated Failed Login Detection
+
 - Groups failed login attempts by username and source IP address.
 - Generates an alert after 3 or more failed attempts.
 - Assigns MEDIUM severity for 3–4 attempts.
 - Assigns HIGH severity for 5 or more attempts.
 
 ### Rule 2: Multiple Source IP Login Detection
+
 - Groups failed login events by username.
 - Identifies usernames associated with 3 or more distinct source IP addresses.
 - Generates a MEDIUM severity alert when the threshold is reached.
@@ -59,7 +61,7 @@ Run the automated tests with:
 python -m unittest discover -s tests -v
 ```
 
-All five tests passed during testing.
+All five automated tests passed during testing.
 
 ## Limitations
 
@@ -69,15 +71,11 @@ This is a local Python-based prototype that analyzes sample logs. It does not cu
 
 ### Terminal Output
 
-<img src="https://raw.githubusercontent.com/muttinenitejaswini-rgb/Mini-SOC-Project/main/screenshots/mini-soc-terminal-output.png" alt="Mini SOC Terminal Output" width="700">
+![Mini SOC Terminal Output](https://raw.githubusercontent.com/muttinenitejaswini-rgb/Mini-SOC-Project/main/screenshots/mini-soc-terminal-output.png)
 
 ### Security Alert Report
 
-<img src="https://raw.githubusercontent.com/muttinenitejaswini-rgb/Mini-SOC-Project/main/screenshots/mini-soc-alert-report.png" alt="Mini SOC Security Alert Report" width="700">
-
-## Limitations
-
-This is a local Python-based prototype that analyzes sample logs. It does not currently monitor live systems or deploy detection rules inside Wazuh.
+![Mini SOC Security Alert Report](https://raw.githubusercontent.com/muttinenitejaswini-rgb/Mini-SOC-Project/main/screenshots/mini-soc-alert-report.png)
 
 ## Future Improvements
 
